@@ -1,0 +1,43 @@
+.home__sobre {
+  padding: 3rem 0;
+  margin-top: 2rem;
+  .sobre {
+    &__content{
+      @media (max-width: 768px){
+        order: -1;
+        margin-bottom: 2rem;
+      }
+      .sobre__social{
+        margin: 1rem 0;
+      }
+    }
+    &__imagem {
+      position: relative;
+      img{
+        width: 90%;
+        max-width: 350px;
+        margin: 0 auto;
+        position: relative;
+        border-radius: 1rem;
+        overflow: hidden;
+        box-shadow: var(--box-shadow);
+      }
+      &::before {
+        content: "";
+        display: block;
+        width: 250px;
+        height: 400px;
+        background-color: var(--cor-amarelo-100);
+        position: absolute;
+        top: -1.5rem;
+        border-radius: 0 2rem;
+        @media (max-width:767px){
+          right: 0;
+        }
+        @media (min-width:768px){
+          left: .625rem;
+        }
+      }
+    }
+  }
+}

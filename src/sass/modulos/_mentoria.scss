@@ -1,0 +1,25 @@
+.home__mentoria {
+  margin-top: 2rem;
+  background-color: var(--cor-branco-100);
+  .container {
+    .mentoria__content {
+      padding: 2rem 0;
+      p {
+        margin-bottom: 2rem;
+        max-width: 350px;
+      }
+      .subtitulo {
+        max-width: 350px;
+      }
+    }
+    .mentoria__img {
+      img {
+        @media (max-width: 767px) {
+          max-width: 350px;
+          margin-left: auto;
+          margin-right: auto;
+        }
+      }
+    }
+  }
+}

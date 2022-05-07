@@ -1,0 +1,1 @@
+export default function outsideClick(t,e,n){const o=document.documentElement,i="data-outside";function r(u){t.contains(u.target)||(t.removeAttribute(i),e.forEach((t=>{o.removeEventListener(t,r)})),n())}t.hasAttribute(i)||e.forEach((t=>{setTimeout((()=>{o.addEventListener(t,r)}))})),t.setAttribute(i,"")}

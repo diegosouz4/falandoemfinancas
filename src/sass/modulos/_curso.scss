@@ -1,0 +1,35 @@
+.home__curso {
+  padding: 3rem 0;
+  margin-top: 2rem;
+  .curso {
+    &__content {
+      .btn {
+        margin-top: 2rem;
+      }
+    }
+    &__video {
+      position: relative;
+      @media (max-width: 767px) {
+        margin-top: 2.5rem;
+      }
+      &::before {
+        content: "";
+        display: block;
+        width: 250px;
+        height: 400px;
+        background-color: var(--cor-amarelo-100);
+        position: absolute;
+        top: -35px;
+        right: -35px;
+        border-radius: 0 2rem;
+      }
+      iframe {
+        width: 100%;
+        border: 2px solid var(--cor-branco-300);
+        border-radius: 0.5rem;
+        box-shadow: var(--box-shadow);
+        position: relative;
+      }
+    }
+  }
+}
