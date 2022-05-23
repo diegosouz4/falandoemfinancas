@@ -1,24 +1,13 @@
 // Arquivos básicos
-@import "./base/variaveis";
-@import "./base/resete";
-@import "./base/helpers";
-
-// Módulos
-@import "./modulos/header";
-@import "./modulos/hero";
-@import "./modulos/curso";
-@import "./modulos/destaque";
-@import "./modulos/sobre";
-@import "./modulos/ultimos_artigos";
-@import "./modulos/material-gratuito";
-@import "./modulos/mentoria";
-@import "./modulos/footer";
+@import "./base/base";
 
 // Componentes
-@import "./componentes/botao";
-@import "./componentes/social";
-@import "./componentes/box-destaque";
+@import "./componentes/componentes";
+
+// Módulos
+@import "./modulos/modulos";
 
 // Páginas
+@import "./pages/pages";
 
 // Extras

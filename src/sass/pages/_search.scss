@@ -1,0 +1,172 @@
+.main--search,
+.main--archive {
+  margin-top: 5rem;
+  margin-bottom: 5rem;
+  .container {
+    max-width: 1000px;
+  }
+  h1 {
+    text-align: center;
+    font-size: 2rem;
+    margin-bottom: 0.625rem;
+    color: var(--cor-preto-100);
+    font-weight: 500;
+    text-transform: initial;
+    strong {
+      font-weight: 800;
+      text-transform: uppercase;
+      color: var(--cor-preto-200);
+    }
+  }
+  .search__total {
+    text-align: center;
+    margin-left: auto;
+    margin-right: auto;
+    margin-bottom: 1rem;
+  }
+  .archive__description {
+    p {
+      text-align: center;
+      margin-left: auto;
+      margin-right: auto;
+      margin-bottom: 1rem;
+    }
+  }
+  .busca__principal {
+    max-width: 450px;
+    margin-left: auto;
+    margin-right: auto;
+    margin-bottom: 2rem;
+
+    box-shadow: 0 0.5rem 0.5rem -0.25rem rgba(0, 0, 0, 0.15);
+    border: 2px solid var(--cor-amarelo-100);
+    border-radius: 0.25rem;
+    position: relative;
+    transition: 250ms var(--pop);
+    &:hover {
+      transform: scale(1.04);
+      border-color: var(--cor-azul-100);
+      box-shadow: 0 1rem 1rem -0.5rem rgba(0, 0, 0, 0.05);
+    }
+  }
+
+  .content__blog {
+    .blog__item {
+      width: 100%;
+      padding: 0.625rem;
+      position: relative;
+      &::before {
+        content: "";
+        display: block;
+        width: 5rem;
+        height: calc(100% - 5px);
+        position: absolute;
+        top: 50%;
+        left: -10px;
+        transform: translateY(-50%);
+        background-color: var(--cor-amarelo-100);
+        border-radius: 0.5rem 0 0 0.5rem;
+      }
+      & + li {
+        margin-top: 0.625rem;
+      }
+      article {
+        display: flex;
+        flex-wrap: wrap;
+        align-items: center;
+        gap: 1.25rem;
+
+        padding: 1.25rem;
+        background-color: var(--cor-branco-100);
+        border-radius: 0.25rem;
+        border: 1px solid rgba(0, 0, 0, 0.15);
+        box-shadow: 0 0.5rem 0.5rem -0.25rem rgba(0, 0, 0, 0.25);
+        height: 100%;
+        position: relative;
+        z-index: 1;
+        transition: 250ms var(--pop);
+        &:hover {
+          transform: scale(1.01);
+        }
+
+        .item__thumb {
+          width: 120px;
+          height: 150px;
+          overflow: hidden;
+          border-radius: 0.25rem;
+          object-fit: cover;
+          object-position: center center;
+        }
+        .item__content {
+          .content__title {
+            font-size: 1.125rem;
+            line-height: 1.1;
+            text-transform: uppercase;
+            margin-bottom: 0.3125rem;
+            a {
+              color: var(--cor-preto-200);
+              &:hover,
+              &:focus {
+                color: var(--cor-azul-100);
+              }
+            }
+          }
+          .content__info {
+            margin-bottom: 0.3125rem;
+            span {
+              font-size: 0.75rem;
+              & + span {
+                margin-left: 0.3125rem;
+              }
+            }
+          }
+
+          p {
+            font-size: 0.875rem;
+            margin-bottom: 0.625rem;
+          }
+
+          .content_link {
+            display: inline-block;
+            font-size: 1rem;
+            font-weight: 600;
+            color: var(--cor-preto-200);
+            position: relative;
+            padding-left: 1rem;
+            transition: 250ms ease-in-out;
+            &::before {
+              content: "";
+              display: block;
+              width: 10px;
+              height: 2px;
+              background-color: var(--cor-amarelo-100);
+              position: absolute;
+              left: 0;
+              top: 50%;
+              transform: translateY(-50%);
+              transition: 250ms ease-in-out;
+            }
+            &:hover,
+            &:focus {
+              padding-left: 1.5rem;
+              &::before {
+                width: 1rem;
+              }
+            }
+          }
+        }
+      }
+    }
+  }
+}
+
+.search__fail {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  --tamanho-tela: 50vh;
+  @media (min-width: 500px) {
+    --tamanho-tela: 60vh;
+  }
+  min-height: calc(var(--tamanho-tela) - 90px);
+}

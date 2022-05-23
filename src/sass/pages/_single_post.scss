@@ -1,0 +1,24 @@
+#site-content {
+  .content__body {
+    .grid {
+      max-width: 1000px;
+      @media (min-width: 999px) {
+        display: grid;
+        grid-template-columns: 1fr, 250px;
+        gap: 1rem;
+        .content__wrap {
+          grid-column: 1/2;
+        }
+        .content__sidebar {
+          grid-column: 2/3;
+        }
+      }
+      .content__sidebar {
+        display: none;
+        @media (min-width: 999px) {
+          display: block;
+        }
+      }
+    }
+  }
+}

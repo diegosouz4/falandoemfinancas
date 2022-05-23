@@ -1,6 +1,11 @@
 import outsideClick from "./outsideclick.js";
 
 export default function initMenuMobile() {
+  initMenu();
+  initBuscaForm();
+}
+
+function initMenu() {
   const menu = document.querySelector('[data-menu="menu"]');
   const menuBtn = document.querySelector('[data-menu="btn"]');
   const menuIcone = menuBtn.querySelector(".menu__icone");
@@ -31,4 +36,29 @@ export default function initMenuMobile() {
 
     menuBtn.addEventListener("click", ativaMenu);
   }
+}
+
+function initBuscaForm() {
+  const btnBusca = document.querySelector(".links__busca");
+  const barraBusca = document.querySelector(".header__busca");
+  const classe = "ativo";
+
+  if (!btnBusca && !barraBusca) return;
+
+  function animaBarraBusca(event) {
+    event.preventDefault();
+
+    if (barraBusca.classList.contains(classe)) {
+      barraBusca.classList.remove(classe);
+      return;
+    }
+
+    barraBusca.classList.add(classe);
+
+    outsideClick(barraBusca, ["click"], () => {
+      barraBusca.classList.remove(classe);
+    });
+  }
+
+  btnBusca.addEventListener("click", animaBarraBusca);
 }

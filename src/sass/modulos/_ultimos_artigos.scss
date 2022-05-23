@@ -68,13 +68,13 @@
                 left: 0;
                 background: rgba(33, 92, 198, 0.54);
               }
-              .thumb__categoria {
+              .thumb__categoria,
+              .post-categories {
                 position: absolute;
                 bottom: -5px;
                 left: 4px;
                 font-size: 0.75rem;
                 li {
-                  color: var(--cor-amarelo-200);
                   background-color: var(--cor-amarelo-100);
                   display: inline-block;
                   padding: 0.25rem;
@@ -83,6 +83,9 @@
                   margin: 2px;
                   &:nth-child(n + 3) {
                     display: none;
+                  }
+                  a {
+                    color: var(--cor-amarelo-200);
                   }
                 }
               }
