@@ -1,0 +1,207 @@
+#site-content {
+  &.main--contato {
+    .content__contato {
+      margin: 5rem 0;
+      .container {
+        display: flex;
+        justify-content: space-between;
+        .contato__img {
+          display: none;
+          @media (min-width: 800px) {
+            display: block;
+            width: calc(45% - 0.625rem);
+          }
+          background: url("../img/diogo/falando-em-financas-diogo-contato.webp") no-repeat center center;
+          background-size: cover;
+        }
+        .contato__conteudo {
+          width: 100%;
+          @media (min-width: 800px) {
+            width: calc(55% - 0.625rem);
+          }
+          padding: 0.625rem;
+          h2 {
+            font-size: 2.5rem;
+            color: var(--cor-preto-200);
+            margin-bottom: 1rem;
+          }
+          & > p {
+            font-size: 1rem;
+            margin-bottom: 1rem;
+          }
+          p {
+            color: var(--cor-preto-100);
+          }
+
+          .contato__social {
+            margin-bottom: 2.5rem;
+            svg {
+              width: 1.25rem;
+              height: auto;
+            }
+          }
+
+          .contato__dados {
+            margin-bottom: 2.5rem;
+            h3 {
+              font-size: 1.125rem;
+              font-weight: 800;
+              color: var(--cor-preto-200);
+              margin-bottom: 0.625rem;
+            }
+            p {
+              margin: 0;
+              position: relative;
+              margin-left: 1rem;
+              font-size: 0.875rem;
+              a {
+                color: var(--cor-preto-100);
+                &:hover,
+                &:focus {
+                  color: var(--cor-preto-200);
+                  text-decoration: underline;
+                }
+              }
+              &::before {
+                content: "";
+                display: block;
+                width: 10px;
+                height: 3px;
+                position: absolute;
+                top: 10px;
+                left: -18px;
+                border-radius: 3px;
+                background-color: var(--cor-amarelo-100);
+              }
+              & + p {
+                margin-top: 0.3125rem;
+              }
+            }
+          }
+
+          .contato__form {
+            margin-bottom: 2rem;
+            position: relative;
+            &::before {
+              content: "";
+              background-color: var(--cor-amarelo-100);
+              display: block;
+              width: 50%;
+              height: 530px;
+              position: absolute;
+              top: 50%;
+              right: -50px;
+              z-index: 0;
+              transform: translateY(-50%);
+              border-radius: 2rem 0 2rem 0;
+            }
+            .contato__container {
+              padding: 1rem 1.25rem;
+              border: 1px solid rgb(226, 226, 226);
+              border-radius: 0.25rem;
+              box-shadow: 0 0.5rem 0.5rem -0.25rem rgba(0, 0, 0, 0.15);
+              background-color: var(--cor-branco-300);
+              display: flex;
+              flex-wrap: wrap;
+              align-items: center;
+              justify-content: space-between;
+              position: relative;
+              fieldset {
+                width: 100%;
+                @media (min-width: 500px) {
+                  width: calc(50% - 0.625rem);
+                  margin: 0.625rem 0;
+                  &.wide {
+                    width: 100%;
+                  }
+                }
+                label {
+                  color: var(--cor-preto-100);
+                  display: block;
+                  font-size: 0.875rem;
+                  font-weight: 600;
+                  margin-bottom: 0.3125rem;
+                }
+                input,
+                select,
+                textarea {
+                  color: var(--cor-preto-150);
+                  border: 2px solid #e7e7e7;
+                  border-radius: 2px;
+                  font-size: 1rem;
+                  height: 2.5rem;
+                  line-height: 2.5rem;
+                  padding: 0.3125rem;
+                  width: 100%;
+                  outline: 0;
+                  &:hover {
+                    border-color: var(--cor-amarelo-100);
+                  }
+                  &:focus {
+                    border-color: var(--cor-amarelo-150);
+                  }
+                }
+                textarea {
+                  resize: none;
+                  min-height: 200px;
+                  max-height: 250px;
+                }
+              }
+              .form__enviar {
+                font-size: 1rem;
+                font-weight: 800;
+                text-transform: uppercase;
+                padding: 0.625rem 1.25rem;
+                border-radius: 0.25rem;
+                color: var(--cor-branco-100);
+                background-color: var(--cor-azul-100);
+                &:hover {
+                  background-color: var(--cor-azul-150);
+                }
+                &:focus {
+                  background-color: var(--cor-azul-200);
+                }
+              }
+            }
+          }
+
+          .contato__links {
+            a {
+              font-size: 1rem;
+              font-weight: 800;
+              display: inline-block;
+              width: 200px;
+              @media (max-width: 419px) {
+                display: block;
+                margin-left: auto;
+                margin-right: auto;
+                margin-top: 0.3125rem;
+                margin-bottom: 0.3125rem;
+              }
+              height: 50px;
+              line-height: 50px;
+              text-align: center;
+              border-radius: 0.25rem;
+              border: 2px solid var(--cor-azul-100);
+              position: relative;
+              transition: 450ms var(--pop);
+              &:nth-child(1) {
+                background-color: var(--cor-azul-100);
+                color: var(--cor-branco-100);
+              }
+              &:nth-child(2) {
+                color: var(--cor-azul-100);
+              }
+              &:hover,
+              &:focus {
+                transform: scale(1.02);
+                color: var(--cor-branco-300);
+                background-color: var(--cor-azul-150);
+              }
+            }
+          }
+        }
+      }
+    }
+  }
+}

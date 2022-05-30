@@ -66,127 +66,7 @@
     }
 
     &__body {
-      margin: 5rem 0;
-      .container {
-        max-width: 800px;
-      }
-      h1,
-      h2,
-      h3,
-      h4,
-      h5,
-      h6 {
-        margin-bottom: 1.25rem;
-        font-weight: 700;
-        color: var(--cor-azul-100);
-      }
-      h2 {
-        font-size: 2rem;
-      }
-      h3 {
-        font-size: 1.5rem;
-      }
-      h4 {
-        font-size: 1.25rem;
-      }
-      h5 {
-        font-size: 1rem;
-      }
-      h6 {
-        font-size: 0.875rem;
-      }
-      p,
-      strong,
-      em,
-      li,
-      span {
-        font-size: 0.875rem;
-        max-width: initial;
-        color: var(--cor-preto-200);
-      }
-      p {
-        margin-bottom: 1.25rem;
-        line-height: 1.8;
-        img {
-          width: 20px;
-          height: auto;
-          display: inline;
-        }
-        a {
-          color: var(--cor-preto-200);
-          text-decoration: none;
-          position: relative;
-          font-weight: 600;
-          transition: 250ms ease-in;
-          &::after {
-            content: "";
-            display: block;
-            width: 100%;
-            height: 1.5px;
-            position: absolute;
-            bottom: -8px;
-            left: 0;
-            opacity: 0;
-            background-color: var(--cor-azul-100);
-            transition: 250ms ease-in;
-          }
-          &:hover,
-          &:focus {
-            letter-spacing: 1.5px;
-            color: var(--cor-azul-100);
-            &::after {
-              opacity: 1;
-              bottom: -4px;
-            }
-          }
-        }
-      }
-
-      ol,
-      ul {
-        margin: 1rem 0;
-        margin-left: 1.25rem;
-        li + li {
-          margin-top: 0.675rem;
-        }
-      }
-
-      ol,
-      ul,
-      li {
-        list-style: initial;
-      }
-
-      .wp-block-image {
-        margin-bottom: 1.25rem;
-        .aligncenter {
-          text-align: center;
-        }
-        .aligncenter,
-        img {
-          margin-left: auto;
-          margin-right: auto;
-        }
-        figcaption {
-          text-align: center;
-          margin-top: 0.5em;
-          margin-bottom: 1em;
-          font-size: 0.75rem;
-          color: var(--cor-preto-100);
-        }
-      }
-      .wp-block-quote {
-        margin: 1rem auto;
-        padding: 0 1rem;
-        p {
-          strong {
-            font-size: 1.125rem;
-            line-height: 1.4;
-            font-style: italic;
-            font-weight: 600;
-          }
-        }
-      }
+      @include formatoDefualt;
     }
 
     &__tags {
@@ -217,7 +97,8 @@
       align-items: center;
       justify-content: space-between;
       a {
-        font-size: 1rem;
+        font-size: 0.875rem;
+        max-width: 300px;
         font-weight: 800;
         color: var(--cor-preto-150);
         &:hover,
